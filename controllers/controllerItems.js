@@ -3,7 +3,7 @@ const {Item} = require("../models")
 class ControllerItem {
     static async getItems(req, res, next) {
         try {
-            let getData=await Product.findAll({})
+            let getData=await Item.findAll({})
             res.status(200).json(getData)
         } catch (error) {
             next(error)
