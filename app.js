@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const ControllerUser = require('./controllers/controllerUsers')
 const ControllerProduct = require("./controllers/controllerProducts")
+const ControllerItem = require('./controllers/controllerItems')
 const port = 3000
 // const authentification = require('./middlewares/authen')
 
@@ -29,6 +30,10 @@ app.post('/login', ControllerUser.login)
 app.get('/products', ControllerProduct.getProducts)
 
 app.post('/products/register', ControllerProduct.registerProducts)
+
+app.get('/items', ControllerItem.getItems)
+
+app.post('/items/add', ControllerItem.addItems)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
