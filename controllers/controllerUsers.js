@@ -49,7 +49,7 @@ class ControllerUser {
     }
     static async registerUsers(req, res, next) {
         try {
-            let {username,email,password,role,phoneNumber,address}=req.body
+            let {username,email,password,role,phoneNumber,address,RoleId}=req.body
                 console.log(req.body,'ini dari body')
             let addUser=await User.create({
                 username,
@@ -57,7 +57,8 @@ class ControllerUser {
                 password,
                 role,
                 phoneNumber,
-                address
+                address,
+                RoleId
             })
             res.status(200).json(addUser)
         } catch (error) {
