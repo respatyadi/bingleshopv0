@@ -1,7 +1,6 @@
 {
   "name": "bingleshopv0",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +19,15 @@
   "devDependencies": {
     "nodemon": "^2.0.20",
     "sequelize-cli": "^6.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/respatyadi/bingleshopv0.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/respatyadi/bingleshopv0/issues"
+  },
+  "homepage": "https://github.com/respatyadi/bingleshopv0#readme",
+  "description": ""
 }
