@@ -14,12 +14,12 @@ class ControllerItem {
         try {
             let {qty,price,ProductId}=req.body
 
-            let chooseItem=await Item.create({
+            let addData=await Item.create({
                 qty,
                 price,
                 ProductId
             })
-            res.status(200).json(chooseItem)
+            res.status(200).json(addData)
         } catch (error) {
     next(error)
     
