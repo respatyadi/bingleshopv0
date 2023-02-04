@@ -69,7 +69,6 @@ module.exports = {
       onUpdate: "cascade",
       onDelete: "cascade",
     });
-
   },
 
   async down (queryInterface, Sequelize) {

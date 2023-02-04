@@ -12,13 +12,13 @@ class ControllerOrder {
     }
     static async addOrders(req, res, next) {
         try {
-            let {status,total,UserId,itemId}=req.body
+            let {status,total,UserId,ItemId}=req.body
 
             let addData=await Order.create({
                 status,
                 total,
                 UserId,
-                itemId
+                ItemId
             })
             res.status(200).json(addData)
         } catch (error) {
