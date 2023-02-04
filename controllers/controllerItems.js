@@ -12,12 +12,13 @@ class ControllerItem {
     }
     static async addItems(req, res, next) {
         try {
-            let {qty,price,ProductId}=req.body
+            let {qty,price,ProductId,OrderId}=req.body
 
             let addData=await Item.create({
                 qty,
                 price,
-                ProductId
+                ProductId,
+                OrderId
             })
             res.status(200).json(addData)
         } catch (error) {
